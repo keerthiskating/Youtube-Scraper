@@ -69,7 +69,7 @@ class Youtube:
 
     def get_comment_threads(self, video_id, token, input_list, keyword):
 
-        results = youtube.commentThreads().list(
+        results = self.__youtube_service_obj.commentThreads().list(
             part="snippet,replies",
             videoId=video_id,
             textFormat="plainText",
